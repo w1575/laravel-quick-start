@@ -45,6 +45,16 @@ Dockerfile line
 
  && apt-get install -y  gnupg gosu curl ca-certificates zip unzip git supervisor sqlite3 libcap2-bin libpng-dev python2 `nano php-amqp\`
 
+# Пакет для настройки очередей
+ composer require vladimir-yuldashev/laravel-queue-rabbitmq
+ 
+ Чтобы в конктерное джобе указать явно queue, в которую нужно их отправлять нужно в конструкторе 
+
+ ```
+ $this->queue = "super-job";
+ ```
+ И они все будут отправляться в нее при Job::dispatch();
+
  ## Установка пакетов composer 
  
  docker run --rm \
