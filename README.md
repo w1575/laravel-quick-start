@@ -71,3 +71,9 @@ Dockerfile line
 SAIL_XDEBUG_MODE=develop,debug,coverage
 PHP_IDE_CONFIG=serverName=<Server Name in PhpStorm>
 ```
+
+Настройка в шторме 
+
+![xdebug-server](imgs/xdebug-server.png)
+![xdebug-validatet](imgs/xdebug-validate.png)
+![xdebug-sail-consolet](imgs/xdebug-sail-console.png)
