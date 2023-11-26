@@ -55,14 +55,16 @@ Dockerfile line
  ```
  И они все будут отправляться в нее при Job::dispatch();
 
- ## Установка пакетов composer 
+ ## Установка пакетов composer в склонированный проект с sail. (папка vendor пуста)
  
  docker run --rm \
  -u "$(id -u):$(id -g)" \
  -v $(pwd):/opt \
  -w /opt \
- laravelsail/php80-composer:latest \
+ laravelsail/php82-composer:latest \
  composer install --ignore-platform-reqs
+
+ После этого можно уже билдить через sail up -d
 
  # Работа с xdebug через sail 
  .env
